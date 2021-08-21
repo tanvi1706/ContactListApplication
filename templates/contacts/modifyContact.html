@@ -1,0 +1,43 @@
+{% extends 'contacts/base.html' %}
+{% block content %}
+    <h1 class="display-4">Modify Record</h1>
+    <form action="{% url 'mod-contact' %}" method="POST">
+        {% csrf_token %}
+        <label for="modified value">Modified Value</label>
+            <input type="text" placeholder="modified value" name ="fieldvalue">
+        <br>
+        <label for="cid">Contact Id</label>
+            <input type="input" id="cid" name="contact_id">
+        <br>
+        <label for="fn"><input type="radio" id="fn" name="contact" value="fname">First Name</label>
+        <br>
+        <label for="mn"><input type="radio" id="mn" name="contact" value="mname">Middle Name</label>
+        <br>
+        <label for="ln"><input type="radio" id="ln" name="contact" value="lname">Last Name</label>
+        <br>
+        <label for="addType">Address Type</label>
+            <input type="text" id="addType" name="address_type">
+        <br>
+        <label for="add"><input type="radio" id="add" name="address" value="address">Address</label>
+        <br>
+        <label for="acity"><input type="radio" id="acity" name="address" value="city">City</label>
+        <br>
+        <label for="astate"><input type="radio" id="astate" name="address" value="state">State</label>
+        <br>
+        <label for="azip"><input type="radio" id="azip" name="address" value="zip">Zip</label>
+        <br>
+        <label for="ptype">Phone Type</label>
+            <input type="text" id="ptype" name="phone_type">
+        <br>
+        <label for="pareacode"><input type="radio" id="pareacode" name="phone" value="area_code">Area Code</label>
+        <br>
+        <label for="pnumber"><input type="radio" id="pnumber" name="phone" value="number">Phone Number</label>
+        <br>
+        <label for="dt">Date Type</label>
+            <input type="text" id="dt" name="date_type">
+        <br>
+        <label for="dat"><input type="radio" id="dat" name="date" value="d_date">Date</label>
+        <br>
+        <button type="submit" class="btn btn-outline-dark">Submit</button>
+    </form>
+{% endblock %}

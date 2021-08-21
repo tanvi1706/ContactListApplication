@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            text-align: center;
+            margin: 0px 0px 30px 30px;
+        }
+
+    </style>
+    <title>Contact List</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container"> 
+        <h1 class="display-4">Contact List Application:</h1>
+        <div class="row-md">
+            <br>
+            <div class="col">
+                <button type="button" class="btn btn-outline-dark"><a href="{% url 'find' %}">Search</a></button>
+            </div>
+            <br>
+            <div class="col">
+                <button type="button" class="btn btn-outline-dark"><a href="{% url 'insert' %}">Insert</a></button>
+            </div>
+            <br>
+            <div class="col">
+                <button type="button" class="btn btn-outline-dark"><a href="{% url 'modify' %}">Modify</a></button>
+            </div>
+            <br>
+            <div class="col">
+                <button type="button" class="btn btn-outline-dark"><a href="{% url 'del' %}">Delete</a></button>
+            </div>
+            <br>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

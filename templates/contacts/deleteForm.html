@@ -1,0 +1,10 @@
+{% extends 'contacts/base.html' %}
+{% block content %}
+    <h1 class="display-4">Delete Record</h1>
+    <form action="{% url 'del-contact' %}" method="POST">
+        {% csrf_token %}
+        <label for="cid">Contact Id</label>
+            <input type="input" id="cid" name="contact_id">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

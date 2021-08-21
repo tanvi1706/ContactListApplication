@@ -1,0 +1,32 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+<body>
+    <div class="card" style="width: 18rem; margin-left: 550px;">
+        <div class="card-body">
+            {% for item in obj %}
+                <h5>Contact Id: {{ item.contact_id }}</h5>
+                <p>First Name: {{ item.fname }}</p>
+                <p>Middle Name: {{ item.mname }}</p>
+                <p>Last Name: {{ item.lname }}</p>
+                <p>Home Address: {{ item.home_address }}</p>
+                <p>Home City: {{ item.home_city }}</p>
+                <p>Home State: {{ item.home_state }}</p>
+                <p>Home Zip: {{ item.home_zip }}</p>
+                <p>Work Address: {{ item.work_address }}</p>
+                <p>Work City: {{ item.work_city }}</p>
+                <p>Work State: {{ item.work_state }}</p>
+                <p>Work Zip: {{ item.work_zip }}</p>
+                <p>Home Area code: {{ item.home_area_code }}</p>
+                <p>Home Phone Number: {{ item.home_phone }}</p>
+                <p>Work Area code: {{ item.work_area_code }}</p>
+                <p>Work Phone Number: {{ item.work_phone }}</p>
+                <p>birthday date: {{ item.birthday_date }}</p>
+                <p>anniversary date: {{ item.anniversary_date }}</p>
+                <br>
+                <hr>
+            {% endfor %}
+        </div>
+    <div>
+</body>
+{% endblock %}

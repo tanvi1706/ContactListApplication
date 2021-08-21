@@ -1,0 +1,49 @@
+{% extends 'contacts/base.html' %}
+{% block content %}
+    <body>
+        <form action="{% url 'add-a-new-entry' %}" method='POST'>
+            {% csrf_token %}
+            <h1 class="display-4">Insert A new Record</h1>
+            <label for="fn">First Name</label>
+                <input type="text" id="fn" name="fname">
+            <br>
+            <label for="mn">Middle Name</label>
+                <input type="text" id="mn" name="mname">
+            <br>
+            <label for="ln">Last Name</label>
+                <input type="text" id="ln" name="lname">
+            <br>
+            <label for="addType">Address Type</label>
+                <input type="text" id="addType" name="address_type">
+            <br>
+            <label for="add">Address</label>
+                <input type="text" id="add" name="address">
+            <br>
+            <label for="acity">City</label>
+                <input type="text" id="acity" name="city">
+            <br>
+            <label for="astate">State</label>
+                <input type="text" id="astate" name="state">
+            <br>
+            <label for="azip">Zip</label>
+                <input type="text" id="azip" name="zip">
+            <br>
+            <label for="ptype">Phone Type</label>
+                <input type="text" id="ptype" name="phone_type">
+            <br>
+            <label for="pareacode">Area Code</label>
+                <input type="text" id="pareacode" name="area_code">
+            <br>
+            <label for="pnumber">Phone Number</label>
+                <input type="text" id="pnumber" name="number">
+            <br>
+            <label for="dt">Date Type</label>
+                <input type="text" id="dt" name="date_type">
+            <br>
+            <label for="dat">Date</label>
+                <input type="text" id="dat" name="d_date">
+            <br>
+            <button type='submit' class="btn btn-outline-dark">Submit</button>
+        </form>
+    </body>
+{% endblock %}
